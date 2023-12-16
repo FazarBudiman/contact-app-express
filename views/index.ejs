@@ -1,0 +1,38 @@
+<%- include('layouts/header') %>
+
+
+    <%- include('layouts/nav') %>
+
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Halo nama saya <%= nama %>
+                    </h2>
+                </div>
+                <div class="col-md-8">
+                    <% mahasiswa.forEach(mhs=> { %>
+                        <div class="card m-5" style="width: 18rem;">
+                            <div class="card-header">
+                                <%=mhs.email %>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%=mhs.nama %>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <%- include('layouts/footer') %>
